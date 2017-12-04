@@ -3,54 +3,53 @@ from testinfra.utils.ansible_runner import AnsibleRunner
 testinfra_hosts = AnsibleRunner('.molecule/ansible_inventory').get_hosts('all')
 
 
-def test_directories(File):
+def test_directories(host):
     present = [
         "/etc/td-agent"
     ]
     if present:
         for directory in present:
-            d = File(directory)
+            d = host.file(directory)
             assert d.is_directory
             assert d.exists
 
 
-def test_files(File):
+def test_files(host):
     present = [
         "/etc/td-agent/td-agent.conf"
     ]
     if present:
         for file in present:
-            f = File(file)
+            f = host.file(file)
             assert f.exists
             assert f.is_file
 
 
-def test_service(Service):
+def test_service(host):
     present = [
         "td-agent"
     ]
     if present:
         for service in present:
-            s = Service(service)
+            s = host.service(service)
             assert s.is_enabled
             assert s.is_running
 
 
-def test_packages(Package):
+def test_packages(host):
     present = [
         "td-agent"
     ]
     if present:
         for package in present:
-            p = Package(package)
+            p = host.package(package)
             assert p.is_installed
 
 
-def test_socket(Socket):
+def test_socket(host.socket):
     present = [
-        # "unix:///run/haproxy/admin.sock",
         "tcp://0.0.0.0:24224"
     ]
     for socket in present:
-        s = Socket(socket)
+        s = host.socket(socket)
         assert s.is_listening

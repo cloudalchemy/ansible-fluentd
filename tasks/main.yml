@@ -10,6 +10,9 @@
   tags:
     - always
 
+- include: preflight.yml
+  when: ansible_virtualization_type != "docker"
+
 - include: install.yml
 
 - include: configure.yml
