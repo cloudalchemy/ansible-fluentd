@@ -5,7 +5,7 @@
 Ansible Role: fluentd
 =====================
 
-[![Build Status](https://travis-ci.org/SoInteractive/ansible-fluentd.svg?branch=master)](https://travis-ci.org/SoInteractive/ansible-fluentd) [![License: MIT](https://img.shields.io/badge/license-MIT%20License-brightgreen.svg)](https://opensource.org/licenses/MIT) [![Ansible Role](http://img.shields.io/badge/ansible%20role-SoInteractive.fluentd-blue.svg)](https://galaxy.ansible.com/SoInteractive/fluentd/) [![GitHub tag](https://img.shields.io/github/tag/sointeractive/ansible-fluentd.svg)](https://github.com/SoInteractive/ansible-fluentd/tags) [![Twitter URL](https://img.shields.io/twitter/follow/sointeractive.svg?style=social&label=Follow%20%40SoInteractive)](https://twitter.com/sointeractive)
+[![Build Status](https://travis-ci.org/cloudalchemy/ansible-fluentd.svg?branch=master)](https://travis-ci.org/cloudalchemy/ansible-fluentd) [![License: MIT](https://img.shields.io/badge/license-MIT%20License-brightgreen.svg)](https://opensource.org/licenses/MIT) [![Ansible Role](http://img.shields.io/badge/ansible%20role-cloudalchemy.fluentd-blue.svg)](https://galaxy.ansible.com/cloudalchemy/fluentd/) [![GitHub tag](https://img.shields.io/github/tag/cloudalchemy/ansible-fluentd.svg)](https://github.com/cloudalchemy/ansible-fluentd/tags)
 
 Role installs fluentd log forwarder and agregator
 
@@ -17,7 +17,7 @@ Use it in a playbook as follows:
 - hosts: all
   become: true
   roles:
-    - SoInteractive.fluentd
+    - cloudalchemy.fluentd
 ```
 
 Have a look at the [defaults/main.yml](defaults/main.yml) for role variables
