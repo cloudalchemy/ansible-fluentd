@@ -46,10 +46,10 @@ def test_packages(host):
             assert p.is_installed
 #
 #
-#def test_socket(host):
-#    present = [
-#        "tcp://0.0.0.0:24224"
-#    ]
-#    for socket in present:
-#        s = host.socket(socket)
-#        assert s.is_listening
+# def test_socket(host):
+#     present = [
+#         "tcp://0.0.0.0:24224"
+#     ]
+#     for socket in present:
+#         s = host.socket(socket)
+#         assert s.is_listening
