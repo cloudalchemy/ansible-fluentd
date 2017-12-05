@@ -26,30 +26,28 @@
       state: present
 
   - name: add official repository
-    copy:
-      src: td-redhat.repo
-      dest: /etc/yum.repos.d/td.repo
+    yum_repository:
+      name: treasuredata
+      description: TreasureData
+      baseurl: "http://packages.treasuredata.com/3/redhat/$releasever/$basearch"
+      file: td
+      gpgcheck: true
+      gpgkey: https://packages.treasuredata.com/GPG-KEY-td-agent
   when: ansible_pkg_mgr == "yum"
 
-- name: Install fluentd (td-agent)
-  package:
-    name: td-agent
-    update_cache: yes
-    state: present
-
-- name: Install plugins dependencies
+- name: Install fluentd (td-agent) and plugins dependencies
   package:
     name: "{{ item }}"
+    update_cache: yes
     state: present
-  with_items: "{{ fluentd_plugins_dependencies }}"
+  with_items:
+  - td-agent
+  - "{{ fluentd_plugins_dependencies }}"
+  notify: restart td-agent
 
-- name: Ensure fluentd (td-agent) service is enabled and started
-  service:
-    name: td-agent
-    state: started
-    enabled: yes
+- meta: flush_handlers
 
-- name: install plugins, if any
+- name: Install plugins
   gem:
     name: "{{ item }}"
 #    executable: /opt/td-agent/embedded/bin/fluent-gem
@@ -57,5 +55,4 @@
     state: present
     user_install: no
   with_items: "{{ fluentd_plugins }}"
-  notify:
-    - restart td-agent
+  notify: restart td-agent

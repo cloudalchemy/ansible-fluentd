@@ -16,3 +16,8 @@
 - include: install.yml
 
 - include: configure.yml
+
+- name: Ensure fluentd (td-agent) service is enabled
+  systemd:
+    name: td-agent
+    enabled: yes

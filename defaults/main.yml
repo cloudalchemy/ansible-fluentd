@@ -1,6 +1,9 @@
 ---
+
+
+# paths to custom configuration templates
+fluentd_additional_conf: []
+
 fluentd_plugins: []
 #fluentd_plugins:
 #  - fluent-plugin-input-gelf  # https://github.com/MerlinDMC/fluent-plugin-input-gelf
-
-fluentd_additional_conf: []

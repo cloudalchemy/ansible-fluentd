@@ -1,0 +1,7 @@
+# {{ ansible_managed }}
+
+<system>
+  workers {{ ansible_processor_vcpus }}
+</system>
+
+@include /etc/td-agent/conf.d/*.conf

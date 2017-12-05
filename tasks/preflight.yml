@@ -1,7 +1,7 @@
 - name: Check if time is synchronized (ntp test)
   command: "timedatectl status"
   register: time_synchronization
-  changed: false
+  changed_when: false
   tags:
     - skip_ansible_lint
 
@@ -9,7 +9,7 @@
 - name: Register number of file descriptors
   shell: "ulimit -n"
   register: file_descriptors
-  changed: false
+  changed_when: false
   tags:
     - skip_ansible_lint
 
