@@ -20,7 +20,7 @@
     dest: "/etc/td-agent/{{ item }}.conf"
     owner: td-agent
     group: td-agent
-  with:
+  with_items:
     - source
     - filter
     - match
