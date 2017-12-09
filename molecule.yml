@@ -1,6 +1,8 @@
 ---
 ansible:
   playbook: tests/playbook.yml
+  raw_env_vars:
+    ANSIBLE_FORCE_COLOR: true
 driver:
   name: docker
 verifier:
