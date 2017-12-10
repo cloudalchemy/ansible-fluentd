@@ -1,0 +1,27 @@
+---
+- name: Download fluentd_exporter from github and compile it locally
+  become: no
+  shell: "export GOPATH=/tmp/fluentd_exporter; go get github.com/V3ckt0r/fluentd_exporter"
+  args:
+    creates: /tmp/fluentd_exporter
+  run_once: yes
+  delegate_to: localhost
+
+- name: install prometheus exporter
+  copy:
+    src: /tmp/fluentd_exporter/bin/fluentd_exporter
+    dest: /opt/fluentd_exporter
+    mode: 0755
+
+- name: create systemd fluentd_exporter service file
+  template:
+    src: fluentd_exporter.service.j2
+    dest: /etc/systemd/system/fluentd_exporter.service
+  notify:
+  - restart metrics service
+
+- name: ensure metrics service is started and enabled
+  systemd:
+    name: fluentd_exporter
+    enabled: yes
+    state: started

@@ -16,7 +16,9 @@ def test_directories(host):
 
 def test_files(host):
     present = [
-        "/etc/td-agent/td-agent.conf"
+        "/etc/td-agent/td-agent.conf",
+        "/opt/fluentd_exporter",
+        "/etc/systemd/system/fleuntd_exporter.service"
     ]
     if present:
         for file in present:
@@ -27,7 +29,8 @@ def test_files(host):
 
 def test_service(host):
     present = [
-        "td-agent"
+        "td-agent",
+        "fluentd_exporter"
     ]
     if present:
         for service in present:
@@ -48,7 +51,8 @@ def test_packages(host):
 #
 # def test_socket(host):
 #     present = [
-#         "tcp://0.0.0.0:24224"
+#         "tcp://0.0.0.0:24224",
+#         "tcp://0.0.0.0:9309"
 #     ]
 #     for socket in present:
 #         s = host.socket(socket)
