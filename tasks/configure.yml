@@ -30,7 +30,7 @@
 - name: Create custom configuration
   template:
     src:  "{{ item }}.j2"
-    dest: "/etc/td-agent/conf.d/{{ item.split('/')[-1] }}.conf"
+    dest: "/etc/td-agent/conf.d/{{ item.split('/')[-1] }}"
     owner: td-agent
     group: td-agent
   with_items: "{{ fluentd_additional_conf }}"
