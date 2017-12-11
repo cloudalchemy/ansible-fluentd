@@ -33,5 +33,5 @@
     dest: "/etc/td-agent/conf.d/{{ item.split('/')[-1] }}"
     owner: td-agent
     group: td-agent
-  with_items: "{{ fluentd_additional_conf }}"
+  with_items: "{{ fluentd_custom_conf }}"
   notify: reload td-agent
