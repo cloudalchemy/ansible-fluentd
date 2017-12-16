@@ -12,7 +12,7 @@
     dest: /etc/td-agent/td-agent.conf
     owner: td-agent
     group: td-agent
-  notify: reload td-agent
+  notify: restart td-agent
 
 - name: Create additional configuration files
   template:
@@ -34,4 +34,4 @@
     owner: td-agent
     group: td-agent
   with_items: "{{ fluentd_additional_conf }}"
-  notify: reload td-agent
+  notify: restart td-agent
