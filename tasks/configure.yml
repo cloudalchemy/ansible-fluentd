@@ -17,7 +17,7 @@
 - name: Create additional configuration files
   template:
     src: "{{ item }}.conf.j2"
-    dest: "/etc/td-agent/{{ item }}.conf"
+    dest: "/etc/td-agent/conf.d/{{ item }}.conf"
     owner: td-agent
     group: td-agent
   with_items:
@@ -33,5 +33,5 @@
     dest: "/etc/td-agent/conf.d/{{ item.split('/')[-1] }}"
     owner: td-agent
     group: td-agent
-  with_items: "{{ fluentd_additional_conf }}"
-  notify: restart td-agent
+  with_items: "{{ fluentd_custom_conf }}"
+  notify: reload td-agent

@@ -2,7 +2,7 @@
 
 
 # paths to custom configuration templates
-fluentd_additional_conf: []
+fluentd_custom_conf: []
 
 fluentd_plugins: []
 #fluentd_plugins:
