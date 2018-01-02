@@ -35,7 +35,7 @@ def test_service(host):
     if present:
         for service in present:
             s = host.service(service)
-#            assert s.is_enabled
+            assert s.is_enabled
             assert s.is_running
 
 
