@@ -10,7 +10,7 @@ env:
 install:
   - pip install ansible==${ANSIBLE} ansible-lint>=3.4.15 molecule==1.25.0 docker git-semver testinfra>=1.7.0
 script:
-  - TERM=xterm molecule test
+  - molecule test
 deploy:
   provider: script
   skip_cleanup: true

@@ -1,0 +1,15 @@
+# {{ ansible_managed }}
+[Unit]
+Description=Fluentd Metrics Exporter
+After=network.target
+
+[Service]
+Type=simple
+ExecReload=/bin/kill -HUP $MAINPID
+ExecStart=/opt/fluentd_exporter -scrape_uri "http://localhost:24220/api/plugins.json"
+
+SyslogIdentifier=fluentd_exporter
+Restart=always
+
+[Install]
+WantedBy=multi-user.target

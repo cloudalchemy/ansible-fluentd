@@ -4,6 +4,8 @@
 # paths to custom configuration templates
 fluentd_custom_conf: []
 
+fluentd_metrics: False
+
 fluentd_plugins: []
 #fluentd_plugins:
 #  - fluent-plugin-input-gelf  # https://github.com/MerlinDMC/fluent-plugin-input-gelf
