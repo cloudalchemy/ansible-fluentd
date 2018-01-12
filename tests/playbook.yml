@@ -8,6 +8,7 @@
       with_items:
         - iproute
         - net-tools
+      retries: 10
 
 - hosts: all
   any_errors_fatal: yes

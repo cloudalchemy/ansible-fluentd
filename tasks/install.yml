@@ -45,14 +45,20 @@
   - "{{ fluentd_plugins_dependencies }}"
   notify: restart td-agent
 
-- meta: flush_handlers
-
-- name: Install plugins
+- name: Install plugins (1/2)
   gem:
-    name: "{{ item }}"
-#    executable: /opt/td-agent/embedded/bin/fluent-gem
-    executable: /usr/sbin/td-agent-gem
+    name: "{{ ['name']|map('extract', item)  }}"
+    executable: /opt/td-agent/embedded/bin/fluent-gem
     state: present
     user_install: no
   with_items: "{{ fluentd_plugins }}"
   notify: restart td-agent
+
+- name: Install plugins (2/2)
+  get_url:
+    url: "{{ ['url']|map('extract', item)  }}"
+    dest: /etc/td-agent/plugin
+  with_items: "{{ fluentd_plugins }}"
+  notify: restart td-agent
+
+- meta: flush_handlers

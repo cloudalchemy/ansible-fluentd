@@ -7,5 +7,5 @@ fluentd_custom_conf: []
 fluentd_metrics: False
 
 fluentd_plugins: []
-#fluentd_plugins:
-#  - fluent-plugin-input-gelf  # https://github.com/MerlinDMC/fluent-plugin-input-gelf
+# - {'url': "https://raw.githubusercontent.com/emsearcy/fluent-plugin-gelf/master/lib/fluent/plugin/out_gelf.rb"}
+# - {'name': ""}

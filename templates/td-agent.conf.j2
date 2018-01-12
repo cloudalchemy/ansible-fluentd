@@ -7,7 +7,7 @@
 {% if fluentd_metrics %}
 <source>
   @type monitor_agent
-  bind 0.0.0.0
+  bind 127.0.0.1
   port 24220
 </source>
 {% endif %}

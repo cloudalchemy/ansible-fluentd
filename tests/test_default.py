@@ -47,13 +47,12 @@ def test_packages(host):
         for package in present:
             p = host.package(package)
             assert p.is_installed
-#
-#
-# def test_socket(host):
-#     present = [
-#         "tcp://0.0.0.0:24224",
-#         "tcp://0.0.0.0:9309"
-#     ]
-#     for socket in present:
-#         s = host.socket(socket)
-#         assert s.is_listening
+
+
+def test_socket(host):
+    present = [
+        "tcp://127.0.0.1:24220"
+    ]
+    for socket in present:
+        s = host.socket(socket)
+        assert s.is_listening
