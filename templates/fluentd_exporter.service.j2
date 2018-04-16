@@ -6,7 +6,7 @@ After=network.target
 [Service]
 Type=simple
 ExecReload=/bin/kill -HUP $MAINPID
-ExecStart=/opt/fluentd_exporter -scrape_uri "http://localhost:24220/api/plugins.json"
+ExecStart=/usr/local/bin/fluentd_exporter -scrape_uri "http://localhost:24220/api/plugins.json"
 
 SyslogIdentifier=fluentd_exporter
 Restart=always

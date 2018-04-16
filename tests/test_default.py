@@ -17,7 +17,7 @@ def test_directories(host):
 def test_files(host):
     present = [
         "/etc/td-agent/td-agent.conf",
-        "/opt/fluentd_exporter",
+        "/usr/local/bin/fluentd_exporter",
         "/etc/systemd/system/fluentd_exporter.service"
     ]
     if present:

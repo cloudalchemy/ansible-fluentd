@@ -9,7 +9,7 @@
     name: td-agent
     state: restarted
 
-- name: restart metrics service
+- name: restart fluentd metrics service
   systemd:
     daemon_reload: yes
     name: fluentd_exporter

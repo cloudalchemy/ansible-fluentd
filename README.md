@@ -16,7 +16,6 @@ Install and manage [fluentd](https://github.com/fluent/fluentd) log forwarder an
 ## Requirements
 
 - Ansible >= 2.3
-- go-lang installed on deployer machine (same one where ansible is installed) - when used with metrics exporter
 
 ## Role Variables
 
