@@ -1,6 +1,5 @@
 ---
 fluentd_dependencies:
-  - python-software-properties
   - apt-transport-https
 
 fluentd_plugins_dependencies:

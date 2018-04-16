@@ -13,8 +13,9 @@
 
   - name: add td-agent repository
     apt_repository:
-      repo: "deb https://packages.treasuredata.com/2/{{ ansible_distribution|lower }}/{{ ansible_distribution_release|lower }}/ {{ ansible_distribution_release|lower }} contrib"
+      repo: "deb https://packages.treasuredata.com/3/{{ ansible_distribution|lower }}/{{ ansible_distribution_release|lower }}/ {{ ansible_distribution_release|lower }} contrib"
       state: present
+      update_cache: yes
   when: ansible_pkg_mgr == "apt"
 
 - block:
@@ -38,7 +39,6 @@
 - name: Install fluentd (td-agent) and plugins dependencies
   package:
     name: "{{ item }}"
-    update_cache: yes
     state: present
   with_items:
   - td-agent
@@ -60,5 +60,3 @@
     dest: /etc/td-agent/plugin
   with_items: "{{ fluentd_plugins }}"
   notify: restart td-agent
-
-- meta: flush_handlers
