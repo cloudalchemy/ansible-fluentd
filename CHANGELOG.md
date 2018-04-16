@@ -4,6 +4,7 @@
 
 **Merged pull requests:**
 
+- use binaries for metrics exporter [\#12](https://github.com/cloudalchemy/ansible-fluentd/pull/12) ([paulfantom](https://github.com/paulfantom))
 - CI update; typos; docs [\#11](https://github.com/cloudalchemy/ansible-fluentd/pull/11) ([paulfantom](https://github.com/paulfantom))
 
 ## [0.0.7](https://galaxy.ansible.com/cloudalchemy/fluentd) (2018-01-12)
