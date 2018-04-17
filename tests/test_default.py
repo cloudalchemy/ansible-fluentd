@@ -18,7 +18,9 @@ def test_files(host):
     present = [
         "/etc/td-agent/td-agent.conf",
         "/usr/local/bin/fluentd_exporter",
-        "/etc/systemd/system/fluentd_exporter.service"
+        "/etc/systemd/system/fluentd_exporter.service",
+        "/etc/td-agent/plugin/out_gelf.rb",
+        "/opt/td-agent/embedded/bin/secure-forward-ca-generate"
     ]
     if present:
         for file in present:

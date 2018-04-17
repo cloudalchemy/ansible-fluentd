@@ -1,0 +1,16 @@
+- name: Install plugins via name
+  gem:
+    name: "{{ item.name }}"
+    executable: /opt/td-agent/embedded/bin/fluent-gem
+    state: present
+    user_install: no
+    version: "{{ item.version | default(omit) }}"
+  with_items: "{{ fluentd_plugins | selectattr('url', 'undefined') | list }}"
+  notify: restart td-agent
+
+- name: Install plugins via url
+  get_url:
+    url: "{{ item }}"
+    dest: /etc/td-agent/plugin
+  with_items: "{{ fluentd_plugins | selectattr('name', 'undefined') | map(attribute='url') | list }}"
+  notify: restart td-agent

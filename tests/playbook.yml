@@ -5,3 +5,6 @@
     - ansible-fluentd
   vars:
     fluentd_metrics: True
+    fluentd_plugins:
+      - name: fluent-plugin-secure-forward
+      - url: "https://raw.githubusercontent.com/emsearcy/fluent-plugin-gelf/master/lib/fluent/plugin/out_gelf.rb"

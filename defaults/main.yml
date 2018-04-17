@@ -7,5 +7,5 @@ fluentd_custom_conf: []
 fluentd_metrics: False
 
 fluentd_plugins: []
-# - {'url': "https://raw.githubusercontent.com/emsearcy/fluent-plugin-gelf/master/lib/fluent/plugin/out_gelf.rb"}
-# - {'name': ""}
+# - { url: "https://raw.githubusercontent.com/emsearcy/fluent-plugin-gelf/master/lib/fluent/plugin/out_gelf.rb" }
+# - { name: "fluent-plugin-secure-forward", 'version': 0.2.3 }
