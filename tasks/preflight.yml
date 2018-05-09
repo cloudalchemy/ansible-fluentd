@@ -1,3 +1,4 @@
+---
 - name: Check if time is synchronized (ntp test)
   command: "timedatectl status"
   register: time_synchronization
