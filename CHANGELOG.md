@@ -1,6 +1,9 @@
 # Change Log
 
-## [**Next release**](https://galaxy.ansible.com/cloudalchemy/fluentd)
+## [0.0.8](https://galaxy.ansible.com/cloudalchemy/fluentd) (2018-05-27)
+**Fixed bugs:**
+
+- fix architecture var parsing [\#18](https://github.com/cloudalchemy/ansible-fluentd/pull/18) ([paulfantom](https://github.com/paulfantom))
 
 **Merged pull requests:**
 
