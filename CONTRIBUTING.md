@@ -40,7 +40,7 @@ We try to stick to semantic versioning and our releases are made by CI pipeline.
  
 ## Changelog
  
-Changelog is generateg automatically on every merged Pull Request and all information is taken from github issues, PRs and labels.
+Changelog is generated automatically on every merged Pull Request and all information is taken from github issues, PRs and labels.
 
 ## Expectations
 
