@@ -17,7 +17,7 @@
 - name: Fail on desynchronized time
   fail:
     msg: "Synchronize time with NTP. Follow instructions at https://docs.fluentd.org/v1.0/articles/before-install"
-  when: not time_synchronization.stdout_lines[5].split(: )[1]|bool
+  when: not time_synchronization.stdout_lines[5].split(":")[1].strip()|bool
 
 - name: Fail on too small number of file descriptors
   fail:
