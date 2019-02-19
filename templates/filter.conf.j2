@@ -1,1 +1,13 @@
 # {{ ansible_managed }}
+
+{% for filter in fluentd_filters_conf %}
+<filter {{ filter.tag }}>
+  @type {{ filter.type }}
+{% for key, value in filter.items()|sort(attribute='0')  %}
+{% if key == "params" %}
+  {{ value |fluentd_params_to_text }}
+{% endif %}
+{% endfor %}
+</filter>
+{% endfor %}
+

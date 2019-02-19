@@ -1,1 +1,12 @@
 # {{ ansible_managed }}
+
+{% for source in fluentd_sources_conf %}
+<source>
+  @type {{ source.type }}
+{% for key, value in source.items()|sort(attribute='0')  %}
+{% if key != "type" %}
+  {{ value |fluentd_params_to_text }}
+{% endif %}
+{% endfor %}
+</source>
+{% endfor %}

@@ -23,3 +23,27 @@
   fail:
     msg: "Increase number of file descriptors to more than 1024. Follow instructions at https://docs.fluentd.org/v1.0/articles/before-install"
   when: file_descriptors.stdout < "1025"
+
+- name: Fail on source not having type
+  fail:
+    msg: "Each of your input plugin should have its type defined"
+  when: item.type is not defined
+  loop: "{{ fluentd_sources_conf }}"
+
+- name: Fail on output not having type
+  fail:
+    msg: "Each of your output plugin should have its type defined"
+  when: item.type is not defined
+  loop: "{{ fluentd_outputs_conf }}"
+
+- name: Fail on output not having tag
+  fail:
+    msg: "Each of your output plugin should have its tag defined"
+  when: item.tag is not defined
+  loop: "{{ fluentd_outputs_conf }}"
+
+- name: Fail on filter not having tag
+  fail:
+    msg: "Each of your filter plugin should have its tag defined"
+  when: item.tag is not defined
+  loop: "{{ fluentd_filters_conf }}"
