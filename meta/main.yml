@@ -19,7 +19,7 @@ galaxy_info:
   - system
   - logging
   - logs
-  - td-agent
+  - tdagent
   - fluentd
   - monitoring
 
