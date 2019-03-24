@@ -1,10 +1,14 @@
 *.swp
 *.swo
 *.idea
+.vagrant/
+*.retry
+*.log
 *.swp
 *.swo
 *.idea
 .molecule
 .cache
-**__pycache__**
+__pycache__/
+.pytest_cache
 .tox
