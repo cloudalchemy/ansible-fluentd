@@ -1,7 +1,7 @@
 # {{ ansible_managed }}
 [Unit]
 Description=Fluentd Metrics Exporter
-After=network.target
+After=network-online.target
 
 [Service]
 Type=simple
