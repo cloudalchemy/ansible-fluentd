@@ -1,13 +1,14 @@
 # Change Log
 
-## [**Next release**](https://galaxy.ansible.com/cloudalchemy/fluentd)
-
+## [0.1.0](https://galaxy.ansible.com/cloudalchemy/fluentd) (2019-05-04)
 **Implemented enhancements:**
 
 - Support plugins via jinja templates [\#2](https://github.com/cloudalchemy/ansible-fluentd/issues/2)
 
 **Merged pull requests:**
 
+- Synchronize files from cloudalchemy/skeleton [\#32](https://github.com/cloudalchemy/ansible-fluentd/pull/32) ([cloudalchemybot](https://github.com/cloudalchemybot))
+- Wait for network to be online [\#31](https://github.com/cloudalchemy/ansible-fluentd/pull/31) ([paulfantom](https://github.com/paulfantom))
 - Synchronize files from cloudalchemy/skeleton. [\#30](https://github.com/cloudalchemy/ansible-fluentd/pull/30) ([cloudalchemybot](https://github.com/cloudalchemybot))
 - Make linter happy [\#29](https://github.com/cloudalchemy/ansible-fluentd/pull/29) ([jkrol2](https://github.com/jkrol2))
 - Support configuration with jinja2 templates [\#28](https://github.com/cloudalchemy/ansible-fluentd/pull/28) ([jkrol2](https://github.com/jkrol2))
