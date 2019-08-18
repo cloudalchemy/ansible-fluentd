@@ -4,6 +4,7 @@
 
 **Merged pull requests:**
 
+- Synchronize files from cloudalchemy/skeleton [\#34](https://github.com/cloudalchemy/ansible-fluentd/pull/34) ([cloudalchemybot](https://github.com/cloudalchemybot))
 - added restartsec and startlimitinterval configurations [\#33](https://github.com/cloudalchemy/ansible-fluentd/pull/33) ([oguzhaninan](https://github.com/oguzhaninan))
 
 ## [0.1.0](https://galaxy.ansible.com/cloudalchemy/fluentd) (2019-05-04)
