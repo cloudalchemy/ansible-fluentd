@@ -3,18 +3,23 @@ galaxy_info:
   author: Paweł Krupa
   description: Install Fluentd (td-agent version)
   license: MIT
-  min_ansible_version: 2.3
+  company: none
+  min_ansible_version: 2.6
   platforms:
-  - name: Ubuntu
-    versions:
-    - xenial
-  - name: Debian
-    versions:
-    - jessie
-    - stretch
-  - name: EL
-    versions:
-    - 7
+    - name: Ubuntu
+      versions:
+        - bionic
+        - xenial
+    - name: Debian
+      versions:
+        - jessie
+        - stretch
+    - name: EL
+      versions:
+        - 7
+    - name: Fedora
+      versions:
+        - 30
   galaxy_tags:
   - system
   - logging
