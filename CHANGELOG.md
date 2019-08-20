@@ -2,8 +2,19 @@
 
 ## [**Next release**](https://galaxy.ansible.com/cloudalchemy/fluentd)
 
+**Implemented enhancements:**
+
+- Different apprach to monitoring fluentd [\#15](https://github.com/cloudalchemy/ansible-fluentd/issues/15)
+
+**Fixed bugs:**
+
+- `fail on too small number of file descriptors` [\#35](https://github.com/cloudalchemy/ansible-fluentd/issues/35)
+
 **Merged pull requests:**
 
+- Synchronize files from cloudalchemy/skeleton [\#38](https://github.com/cloudalchemy/ansible-fluentd/pull/38) ([cloudalchemybot](https://github.com/cloudalchemybot))
+- remove fluentd\_exporter as this feature is already integrated by using fluentd plugin [\#37](https://github.com/cloudalchemy/ansible-fluentd/pull/37) ([paulfantom](https://github.com/paulfantom))
+- tasks: cast number of fds to int before assertion [\#36](https://github.com/cloudalchemy/ansible-fluentd/pull/36) ([paulfantom](https://github.com/paulfantom))
 - Synchronize files from cloudalchemy/skeleton [\#34](https://github.com/cloudalchemy/ansible-fluentd/pull/34) ([cloudalchemybot](https://github.com/cloudalchemybot))
 - added restartsec and startlimitinterval configurations [\#33](https://github.com/cloudalchemy/ansible-fluentd/pull/33) ([oguzhaninan](https://github.com/oguzhaninan))
 
