@@ -69,8 +69,6 @@ fluentd_filters_conf: []
 # paths to custom configuration templates
 fluentd_custom_conf: []
 
-fluentd_metrics: false
-
 fluentd_plugins: []
 # - { url: "https://raw.githubusercontent.com/emsearcy/fluent-plugin-gelf/master/lib/fluent/plugin/out_gelf.rb" }
 # - { name: "fluent-plugin-secure-forward", 'version': 0.2.3 }

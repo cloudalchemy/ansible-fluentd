@@ -29,7 +29,6 @@ All variables which can be overridden are stored in [defaults/main.yml](defaults
 | Name           | Default Value | Description                        |
 | -------------- | ------------- | -----------------------------------|
 | `fluentd_custom_conf` | [] | Paths to custom configuration templates. [Configuration examples]( https://github.com/fluent/fluentd/tree/master/example). |
-| `fluentd_metrics` | False | Enable or disable fluentd metrics exporter. Metrics exported in prometheus format |
 | `fluentd_plugins` | [] | List of additional plugins |
 
 ## Example

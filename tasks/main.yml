@@ -19,8 +19,6 @@
 
 - include: configure.yml
 
-- include: metrics.yml
-
 - name: Ensure fluentd (td-agent) service is enabled
   service:
     name: td-agent

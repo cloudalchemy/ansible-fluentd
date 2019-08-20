@@ -4,12 +4,4 @@
   workers {{ ansible_processor_vcpus }}
 </system>
 
-{% if fluentd_metrics %}
-<source>
-  @type monitor_agent
-  bind 127.0.0.1
-  port 24220
-</source>
-{% endif %}
-
 @include /etc/td-agent/conf.d/*.conf
