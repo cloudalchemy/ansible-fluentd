@@ -22,7 +22,7 @@
 - name: Fail on too small number of file descriptors
   fail:
     msg: "Increase number of file descriptors to more than 1024. Follow instructions at https://docs.fluentd.org/v1.0/articles/before-install"
-  when: file_descriptors.stdout < "1025"
+  when: file_descriptors.stdout|int < 1025
 
 - name: Fail on source not having type
   fail:
