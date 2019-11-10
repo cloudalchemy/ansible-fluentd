@@ -13,11 +13,11 @@ def fluentd_params_to_text(params):
         if type(val) is list:
             if all([type(x) == dict for x in val]):
                 for v in val:
-                    config += "<{0}>\n  {1}</{0}>\n  ".format(key, params_to_text(v))
+                    config += "<{0}>\n  {1}</{0}>\n  ".format(key, fluentd_params_to_text(v))
             else:
                 config += "{0} {1}\n  ".format(key, val.join(', '))
         elif type(val) is dict:
-            config += "<{0}>\n  {1}</{0}>\n  ".format(key, params_to_text(val))
+            config += "<{0}>\n  {1}</{0}>\n  ".format(key, fluentd_params_to_text(val))
         else:
             config += "{0} {1}\n  ".format(key, val)
             
@@ -25,7 +25,5 @@ def fluentd_params_to_text(params):
 
 
 class FilterModule(object):
-
-
    def filters(self):
        return {'fluentd_params_to_text': fluentd_params_to_text } 
