@@ -12,11 +12,12 @@ galaxy_info:
         - xenial
     - name: Debian
       versions:
-        - jessie
         - stretch
+        - buster
     - name: EL
       versions:
         - 7
+        - 8
     - name: Fedora
       versions:
         - 30

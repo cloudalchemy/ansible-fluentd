@@ -20,7 +20,7 @@ Install and manage [fluentd](https://github.com/fluent/fluentd) log forwarder an
 
 ## Requirements
 
-- Ansible >= 2.5
+- Ansible >= 2.6 (It might work on previous versions, but we cannot guarantee it)
 
 ## Role Variables
 
@@ -52,7 +52,7 @@ We provide demo site for full monitoring solution based on prometheus and grafan
 The preferred way of locally testing the role is to use Docker and [molecule](https://github.com/metacloud/molecule) (v2.x). You will have to install Docker on your system. See "Get started" for a Docker package suitable to for your system.
 We are using tox to simplify process of testing on multiple ansible versions. To install tox execute:
 ```sh
-pip install tox
+pip3 install tox
 ```
 To run tests on all ansible versions (WARNING: this can take some time)
 ```sh

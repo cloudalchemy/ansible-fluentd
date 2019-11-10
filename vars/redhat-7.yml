@@ -1,5 +1,5 @@
 ---
 fluentd_dependencies:
-  - python3-libselinux
+  - libselinux-python
 
 fluentd_plugins_dependencies: []
