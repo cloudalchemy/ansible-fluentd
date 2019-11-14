@@ -20,7 +20,7 @@ Install and manage [fluentd](https://github.com/fluent/fluentd) log forwarder an
 
 ## Requirements
 
-- Ansible >= 2.6 (It might work on previous versions, but we cannot guarantee it)
+- Ansible >= 2.7 (It might work on previous versions, but we cannot guarantee it)
 
 ## Role Variables
 
