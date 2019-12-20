@@ -10,9 +10,9 @@
 [![GitHub tag](https://img.shields.io/github/tag/cloudalchemy/ansible-fluentd.svg)](https://github.com/cloudalchemy/ansible-fluentd/tags)
 [![IRC](https://img.shields.io/badge/irc.freenode.net-%23cloudalchemy-yellow.svg)](https://kiwiirc.com/nextclient/#ircs://irc.freenode.net/#cloudalchemy)
 
-## Important. Maintainer needed!
+## Important!
 
-We are currently looking for a maintainer for this repository, if you know someone who would like to become one, let us know. Unfortunatelly if we don't find any volunteers we will need to archive this repository.
+We are no longer supporting this role, which means we will not accept and PRs nor new issues. We won't be removing this repository, but we strongly encourage you to switch to alternatives such as [idealista/fluentd-role](https://github.com/idealista/fluentd-role)
 
 ## Description
 
